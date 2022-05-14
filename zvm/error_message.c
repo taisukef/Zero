@@ -3,42 +3,42 @@
 
 ZVM_ErrorDefinition zvm_error_message_format[] = {
     {"dummy"},
-    {"�s���ȃ}���`�o�C�g�����ł��B"},
-    {"�֐�$(name)�����t����܂���B"},
-    {"�֐�$(package)#$(name)���d����`����Ă��܂��B"},
-    {"�z��͈̔̓G���[�B�T�C�Y$(size)�̔z���$(index)���A�N�Z�X���Ă��܂��B"},
-    {"�����l���[���ŏ��Z���Ă��܂��B"},
-    {"null���Q�Ƃ��Ă��܂��B"},
-    {"���[�h����t�@�C�������t����܂���$(file)"},
-    {"�t�@�C���̃��[�h�ŃG���[���������܂���($(status))�B"},
-    {"�N���X$(package)#$(name)���d����`����Ă��܂��B"},
-    {"�N���X$(name)�����t����܂���B"},
-    {"���̃I�u�W�F�N�g�̃N���X��$(org)�ł��B"
-     "$(target)�Ƀ_�E���L���X�g�͂ł��܂���B"},
+    {"不正なマルチバイト文字です。"},
+    {"関数$(name)が見付かりません。"},
+    {"関数$(package)#$(name)が重複定義されています。"},
+    {"配列の範囲エラー。サイズ$(size)の配列の$(index)をアクセスしています。"},
+    {"整数値をゼロで除算しています。"},
+    {"nullを参照しています。"},
+    {"ロードするファイルが見付かりません$(file)"},
+    {"ファイルのロードでエラーが発生しました($(status))。"},
+    {"クラス$(package)#$(name)が重複定義されています。"},
+    {"クラス$(name)が見付かりません。"},
+    {"このオブジェクトのクラスは$(org)です。"
+     "$(target)にダウンキャストはできません。"},
     {"dummy"}
 };
 
 ZVM_ErrorDefinition zvm_native_error_message_format[] = {
-    {"�z��͈̔̓G���[�B�T�C�Y$(size)�̔z���$(pos)��"
-     "insert���悤�Ƃ��Ă��܂��B"},
-    {"�z��͈̔̓G���[�B�T�C�Y$(size)�̔z���$(pos)��"
-     "remove���悤�Ƃ��Ă��܂��B"},
-    {"�����񒆂̈ʒu�w�肪�͈͊O�ł��B"
-     "����$(len)�̕�����ɑ΂�$(pos)���w�肵�Ă��܂��B"},
-    {"�������substr()�̑�2����(�؂�o��������)���͈͊O($(len))�ł��B"},
-    {"fopen�̑�1������null���n����Ă��܂��B"},
-    {"fopen�̑�2������null���n����Ă��܂��B"},
-    {"fgets�ɓn����Ă���t�@�C���|�C���^��null�ł��B"},
-    {"fgets�̈����̌^���s���ł��B"},
-    {"fgets�ɓn����Ă���t�@�C���|�C���^�������ł��B"
-     "���Ԃ�close()����Ă��܂��B"},
-    {"fgets�œǂݍ��񂾃}���`�o�C�g�����������\\���ɕϊ��ł��܂���B"},
-    {"fputs�̑�2�����ɓn����Ă���t�@�C���|�C���^��null�ł��B"},
-    {"fputs�̈����̌^���s���ł��B"},
-    {"fputs�ɓn����Ă���t�@�C���|�C���^�������ł��B"
-     "���Ԃ�close()����Ă��܂��B"},
-    {"fclose�̈�����null���n����Ă��܂��B"},
-    {"fclose�̈����̌^���s���ł��B"},
-    {"fclose�ɓn����Ă���t�@�C���|�C���^�������ł��B"
-     "���Ԃ����close()����Ă��܂��B"},
+    {"配列の範囲エラー。サイズ$(size)の配列の$(pos)に"
+     "insertしようとしています。"},
+    {"配列の範囲エラー。サイズ$(size)の配列の$(pos)を"
+     "removeしようとしています。"},
+    {"文字列中の位置指定が範囲外です。"
+     "長さ$(len)の文字列に対し$(pos)を指定しています。"},
+    {"文字列のsubstr()の第2引数(切り出す文字列長)が範囲外($(len))です。"},
+    {"fopenの第1引数にnullが渡されています。"},
+    {"fopenの第2引数にnullが渡されています。"},
+    {"fgetsに渡されているファイルポインタがnullです。"},
+    {"fgetsの引数の型が不正です。"},
+    {"fgetsに渡されているファイルポインタが無効です。"
+     "たぶんclose()されています。"},
+    {"fgetsで読み込んだマルチバイト文字列を内部表現に変換できません。"},
+    {"fputsの第2引数に渡されているファイルポインタがnullです。"},
+    {"fputsの引数の型が不正です。"},
+    {"fputsに渡されているファイルポインタが無効です。"
+     "たぶんclose()されています。"},
+    {"fcloseの引数にnullが渡されています。"},
+    {"fcloseの引数の型が不正です。"},
+    {"fcloseに渡されているファイルポインタが無効です。"
+     "たぶん既にclose()されています。"},
 };
