@@ -40,7 +40,13 @@ $(TARGET):$(OBJS)
 	$(CC) $(OBJS) -o $@ $(LIBFLAGS)
 
 clean:
-	rm -f *.o lex.yy.c y.tab.c y.tab.h *~
+	rm -f *.o lex.yy.c y.tab.c y.tab.h *~ \
+    ./builtin/builtin.o\
+    ../zvm/*.o\
+    ../share/*.o\
+    ../memory/*.o\
+    ../debug/*.o
+
 y.tab.h : zero.y
 	bison --yacc -dv zero.y
 y.tab.c : zero.y
